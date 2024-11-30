@@ -49,6 +49,9 @@
       "defaultConfiguration": "production"
     },
     "serve": {
+      "options":{
+        "proxyConfig": "apps/GDGDemo-Frontend/proxy.conf.json"
+      },
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {

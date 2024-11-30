@@ -1,0 +1,31 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Configuración del repositorio
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Instalación de dependencias
+      - name: Install dependencies
+        run: npm install
+
+      # Construcción del frontend
+      - name: Build frontend
+        run: nx build frontend --configuration production
+
+      # Construcción del backend
+      - name: Build backend
+        run: nx build backend
+
+      # Despliegue del backend y frontend (por ejemplo, a Heroku o Vercel)
+      - name: Deploy to platform
+        run: echo "Realiza tu despliegue aquí (Heroku, AWS, etc.)"
