@@ -20,11 +20,11 @@ jobs:
 
       # Construcción del frontend
       - name: Build frontend
-        run: npx nx build frontend --configuration production
+        run: npx nx build GDGDemo-frontend --configuration production
 
       # Construcción del backend
       - name: Build backend
-        run: npx nx build backend
+        run: npx nx build menu-backend
 
       # Despliegue del backend y frontend (por ejemplo, a Heroku o Vercel)
       - name: Deploy to platform
