@@ -20,7 +20,7 @@ jobs:
 
       # Construcción del frontend
       - name: Build frontend
-        run: npx nx build GDGDemo-frontend --configuration production
+        run: npx nx build GDGDemo-Frontend --configuration production
 
       # Construcción del backend
       - name: Build backend
